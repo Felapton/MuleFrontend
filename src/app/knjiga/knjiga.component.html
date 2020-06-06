@@ -1,0 +1,24 @@
+<h1>Knjiga</h1>
+<div class="col-md-12" *ngFor="let item of data">
+    <table>
+        <thead>
+            <tr>
+                <th style="font-weight: bolder;">Naziv Knjige</th>
+                <th style="font-weight: bolder;">Cena Knjige</th>
+                <th style="font-weight: bolder;">Kolicina Na Stanju</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style ="text-align: center;">{{item.NazivKnjige}}</td>
+                <td style ="text-align: center;">{{item.Cena}}</td>
+                <td style ="text-align: center;">{{item.KolicinaNaStanju}}</td>
+                <button type="button">Izbrisi</button>
+                <button type="button">Uredi</button>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
