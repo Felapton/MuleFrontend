@@ -12,7 +12,6 @@ export class KnjigaComponent implements OnInit {
 
   public data = [];
   public id;
-  public mode;
 
   constructor(private svc: KnjigaService, private route: ActivatedRoute) { }
 
@@ -20,7 +19,6 @@ export class KnjigaComponent implements OnInit {
     this.id = this.route.snapshot.params.id;
     if(!this.id){
       this.getKnjige();
-      this.mode = 'Knjige';
     }
   }
 

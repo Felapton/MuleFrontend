@@ -1,18 +1,14 @@
-<h1>Knjiga</h1>
+<h1>Tip Knjige</h1>
 <div class="col-md-12">
     <table class="myTable">
         <thead>
             <tr>
-                <th>Naziv Knjige</th>
-                <th>Cena</th>
-                <th>Na stanju</th>
+                <th>Tip Knjige</th>
             </tr>
         </thead>
         <tbody *ngFor="let item of data">
             <tr>
-                <td style ="text-align: center;">{{item.NazivKnjige}}</td>
-                <td style ="text-align: center;">{{item.Cena}}</td>
-                <td style ="text-align: center;">{{item.KolicinaNaStanju}}</td>
+                <td style ="text-align: center;">{{item.NazivTipa}}</td>
                 <div class="btn-group">
                     <button class="myButton">Uredi</button>
                     <button class="myButton">Izbrisi</button>
@@ -21,5 +17,3 @@
         </tbody>
     </table>
 </div>
-
-
