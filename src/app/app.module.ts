@@ -8,13 +8,16 @@ import { KnjigaComponent } from './knjiga/knjiga.component';
 import { KnjigaService } from './Services/knjiga.service';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TipKnjigeComponent } from './tip-knjige/tip-knjige.component';
+import { TipKnjigeService } from './Services/tip-knjige.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     KnjigaComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TipKnjigeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpClientModule
   ],
   providers: [
-    KnjigaService
+    KnjigaService,
+    TipKnjigeService
   ],
   bootstrap: [AppComponent]
 })
