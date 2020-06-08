@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TipKnjigeComponent } from './tip-knjige/tip-knjige.component';
 import { TipKnjigeService } from './Services/tip-knjige.service';
+import { TipKnjigeFormComponent } from './tip-knjige-form/tip-knjige-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TipKnjigeService } from './Services/tip-knjige.service';
     KnjigaComponent,
     HomeComponent,
     PageNotFoundComponent,
-    TipKnjigeComponent
+    TipKnjigeComponent,
+    TipKnjigeFormComponent
   ],
   imports: [
     BrowserModule,
