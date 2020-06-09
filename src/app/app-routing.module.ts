@@ -9,6 +9,7 @@ import { KupacComponent } from './Components/kupac/kupac.component';
 import { ClanskaKartaComponent } from './Components/clanska-karta/clanska-karta.component';
 import { PisacComponent } from './Components/pisac/pisac.component';
 import { NagradaComponent } from './Components/nagrada/nagrada.component';
+import { ProdajaComponent } from './Components/prodaja/prodaja.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'clanska', component: ClanskaKartaComponent},
   {path: 'pisac', component: PisacComponent},
   {path: 'nagrada', component: NagradaComponent},
+  {path: 'prodaja', component: ProdajaComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
