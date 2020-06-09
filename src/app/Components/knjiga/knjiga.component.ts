@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { KnjigaService } from '../Services/knjiga.service';
+import { KnjigaService } from '../../Services/knjiga.service';
 import {ActivatedRoute} from '@angular/router';
 import { fromEventPattern } from 'rxjs';
 

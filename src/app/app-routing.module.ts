@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { KnjigaComponent } from './knjiga/knjiga.component';
-import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { TipKnjigeComponent } from './tip-knjige/tip-knjige.component';
+import { HomeComponent } from './Components/home/home.component';
+import { KnjigaComponent } from './Components/knjiga/knjiga.component';
+import { TipKnjigeComponent } from './Components/tip-knjige/tip-knjige.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
+import { KorisnikComponent } from './Components/korisnik/korisnik.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'knjiga', component: KnjigaComponent},
   {path: 'tip', component: TipKnjigeComponent},
+  {path: 'korisnik', component: KorisnikComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
