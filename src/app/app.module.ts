@@ -13,6 +13,7 @@ import { TipKnjigeComponent } from './Components/tip-knjige/tip-knjige.component
 import { TipKnjigeFormComponent } from './Components/tip-knjige-form/tip-knjige-form.component';
 import { KorisnikComponent } from './Components/korisnik/korisnik.component';
 import { KupacComponent } from './Components/kupac/kupac.component';
+import { ClanskaKartaComponent } from './Components/clanska-karta/clanska-karta.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { KupacComponent } from './Components/kupac/kupac.component';
     TipKnjigeComponent,
     TipKnjigeFormComponent,
     KorisnikComponent,
-    KupacComponent
+    KupacComponent,
+    ClanskaKartaComponent
   ],
   imports: [
     BrowserModule,
