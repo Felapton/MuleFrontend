@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
 import { TipKnjigeComponent } from './Components/tip-knjige/tip-knjige.component';
 import { TipKnjigeFormComponent } from './Components/tip-knjige-form/tip-knjige-form.component';
 import { KorisnikComponent } from './Components/korisnik/korisnik.component';
+import { KupacComponent } from './Components/kupac/kupac.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { KorisnikComponent } from './Components/korisnik/korisnik.component';
     PageNotFoundComponent,
     TipKnjigeComponent,
     TipKnjigeFormComponent,
-    KorisnikComponent
+    KorisnikComponent,
+    KupacComponent
   ],
   imports: [
     BrowserModule,

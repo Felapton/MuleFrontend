@@ -5,6 +5,7 @@ import { KnjigaComponent } from './Components/knjiga/knjiga.component';
 import { TipKnjigeComponent } from './Components/tip-knjige/tip-knjige.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { KorisnikComponent } from './Components/korisnik/korisnik.component';
+import { KupacComponent } from './Components/kupac/kupac.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'knjiga', component: KnjigaComponent},
   {path: 'tip', component: TipKnjigeComponent},
   {path: 'korisnik', component: KorisnikComponent},
+  {path: 'kupac', component: KupacComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
