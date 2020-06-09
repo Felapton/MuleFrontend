@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
 import { KorisnikComponent } from './Components/korisnik/korisnik.component';
 import { KupacComponent } from './Components/kupac/kupac.component';
 import { ClanskaKartaComponent } from './Components/clanska-karta/clanska-karta.component';
+import { PisacComponent } from './Components/pisac/pisac.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'korisnik', component: KorisnikComponent},
   {path: 'kupac', component: KupacComponent},
   {path: 'clanska', component: ClanskaKartaComponent},
+  {path: 'pisac', component: PisacComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
