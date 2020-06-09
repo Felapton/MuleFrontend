@@ -15,6 +15,7 @@ import { KorisnikComponent } from './Components/korisnik/korisnik.component';
 import { KupacComponent } from './Components/kupac/kupac.component';
 import { ClanskaKartaComponent } from './Components/clanska-karta/clanska-karta.component';
 import { PisacComponent } from './Components/pisac/pisac.component';
+import { NagradaComponent } from './Components/nagrada/nagrada.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PisacComponent } from './Components/pisac/pisac.component';
     KorisnikComponent,
     KupacComponent,
     ClanskaKartaComponent,
-    PisacComponent
+    PisacComponent,
+    NagradaComponent
   ],
   imports: [
     BrowserModule,
