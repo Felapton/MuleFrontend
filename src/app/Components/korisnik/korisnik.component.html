@@ -1,0 +1,33 @@
+<h1>Korisnik</h1>
+<body>
+    <button class="addButton">Dodaj</button>
+
+    <div class="col-md-12">
+        <table class="myTable">
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Adresa</th>
+                    <th>Grad</th>
+                    <th>Kontakt</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of data">
+                <tr>
+                    <td style ="text-align: center;">{{item.ImeKorisnika}}</td>
+                    <td style ="text-align: center;">{{item.PrezimeKorisnika}}</td>
+                    <td style ="text-align: center;">{{item.AdresaKorisnika}}</td>
+                    <td style ="text-align: center;">{{item.GradKorisnika}}</td>
+                    <td style ="text-align: center;">{{item.KontaktKorisnika}}</td>
+                    <td style ="text-align: center;">{{item.EMailKorisnika}}</td>
+                    <div class="btn-group">
+                        <button class="myButton">Uredi</button>
+                        <button class="myButton">Izbrisi</button>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

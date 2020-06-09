@@ -1,6 +1,6 @@
 import { Component, OnInit, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__ } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TipKnjigeService } from '../Services/tip-knjige.service';
+import { TipKnjigeService } from '../../Services/tip-knjige.service';
 import Swal from 'sweetalert2';
 
 
