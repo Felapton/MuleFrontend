@@ -12,4 +12,10 @@ export class TipKnjigeService {
   public getTipKnjige() : Observable<any>{
     return this.http.get<any[]>(`http://localhost:8081/api/tipknjige`);
   }
+
+  public addTipKnjige(data: any): Observable<any>{
+    return this.http.post(`http://localhost:8081/api/tipknjige`, data);
+  }
+
+
 }
