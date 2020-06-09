@@ -1,0 +1,23 @@
+<h1>Korisnik</h1>
+<body>
+    <button class="addButton">Dodaj</button>
+
+    <div class="col-md-12">
+        <table class="myTable">
+            <thead>
+                <tr>
+                    <th>Naziv Nagrade</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of data">
+                <tr>
+                    <td style ="text-align: center;">{{item.NazivNagrade}}</td>
+                    <div class="btn-group">
+                        <button class="myButton">Uredi</button>
+                        <button class="myButton">Izbrisi</button>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

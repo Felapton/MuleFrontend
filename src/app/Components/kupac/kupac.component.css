@@ -110,5 +110,9 @@ table.myTable {
 	top:1px;
 }
 
+.btn-group{
+  float: left;
+}
+
 
 
