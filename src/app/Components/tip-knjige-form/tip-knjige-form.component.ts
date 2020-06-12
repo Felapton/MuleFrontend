@@ -13,6 +13,7 @@ export class TipKnjigeFormComponent implements OnInit {
 
   public id;
   public tipForm: FormGroup;
+  public item;
 
   constructor(private formBuilder: FormBuilder,
     private tipService: TipKnjigeService,
@@ -30,7 +31,7 @@ export class TipKnjigeFormComponent implements OnInit {
 
   private getTip() {
     this.tipService.getTipKnjigeByID(this.id).subscribe(res => {
-      this.tipForm.patchValue(res);
+      this.tipForm.patchValue(res[0]);
       console.log(res);
     }, err => {
       console.log(err);
@@ -71,16 +72,19 @@ export class TipKnjigeFormComponent implements OnInit {
       confirmButtonText: 'Da, izmeni!'
     }).then((result) => {
       if (result.value) {
+        this.tipService.updateTipKnjige(this.id, this.tipForm.value).subscribe(res => {
+          this.item = res;
+          console.log(res);
+          this.tipForm.setValue({NazivTipa: this.item.NazivTipa})
+        }, err => {
+          console.log(err);
+        });
         Swal.fire({
           position: 'top-end',
           icon: 'success',
           title: 'Tip Knjige je uspesno izmenjen!',
           showConfirmButton: false,
           timer: 1500
-        });
-        this.tipService.updateTipKnjige(this.id, this.tipForm.value).subscribe(res => {
-        }, err => {
-          console.log(err);
         });
         this.router.navigateByUrl('tip');
       }

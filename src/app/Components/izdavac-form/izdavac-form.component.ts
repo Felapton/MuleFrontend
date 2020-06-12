@@ -30,7 +30,7 @@ export class IzdavacFormComponent implements OnInit {
 
   private getIzdavac() {
     this.izdavacService.getIzdavacByID(this.id).subscribe(res => {
-      this.izdavacForm.patchValue(res);
+      this.izdavacForm.patchValue(res[0]);
       console.log(res);
     }, err => {
       console.log(err);

@@ -30,7 +30,7 @@ export class PisacFormComponent implements OnInit {
 
   private getPisac() {
     this.pisacService.getPisacByID(this.id).subscribe(res => {
-      this.pisacForm.patchValue(res);
+      this.pisacForm.patchValue(res[0]);
       console.log(res);
     }, err => {
       console.log(err);
