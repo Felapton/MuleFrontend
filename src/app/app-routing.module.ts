@@ -15,8 +15,7 @@ import { PisacFormComponent } from './Components/pisac-form/pisac-form.component
 import { IzdavacComponent } from './Components/izdavac/izdavac.component';
 import { IzdavacFormComponent } from './Components/izdavac-form/izdavac-form.component';
 import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.component';
-
-
+import { KupacFormComponent } from './Components/kupac-form/kupac-form.component';
 
 
 const routes: Routes = [
@@ -28,6 +27,8 @@ const routes: Routes = [
   {path: 'dodajKorisnika', component: KorisnikFormComponent},
   {path: 'dodajKorisnika/:id', component: KorisnikFormComponent},
   {path: 'kupac', component: KupacComponent},
+  {path: 'dodajKupca', component: KupacFormComponent},
+  {path: 'dodajKupca/:id', component: KupacFormComponent},
   {path: 'clanska', component: ClanskaKartaComponent},
   {path: 'pisac', component: PisacComponent},
   {path: 'dodajPisca', component: PisacFormComponent},

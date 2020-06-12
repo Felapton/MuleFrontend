@@ -1,36 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { IzdavacService } from 'src/app/Services/izdavac.service';
+import { KupacService } from 'src/app/Services/kupac.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-izdavac-form',
-  templateUrl: './izdavac-form.component.html',
-  styleUrls: ['./izdavac-form.component.css']
+  selector: 'app-kupac-form',
+  templateUrl: './kupac-form.component.html',
+  styleUrls: ['./kupac-form.component.css']
 })
-export class IzdavacFormComponent implements OnInit {
+export class KupacFormComponent implements OnInit {
 
   public id;
-  public izdavacForm: FormGroup;
+  public kupacForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
-    private izdavacService: IzdavacService,
+    private kupacService: KupacService,
     private router: Router,
     private route: ActivatedRoute) {
-      this.izdavacForm = this.createIzdavacForm();
+      this.kupacForm = this.createKupacForm();
     }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
     if(this.id) {
-      this.getIzdavac();
+      this.getKupac();
     }
   }
 
-  private getIzdavac() {
-    this.izdavacService.getIzdavacByID(this.id).subscribe(res => {
-      this.izdavacForm.patchValue(res[0]);
+  private getKupac() {
+    this.kupacService.getKupacByID(this.id).subscribe(res => {
+      this.kupacForm.patchValue(res[0]);
       console.log(res);
     }, err => {
       console.log(err);
@@ -46,15 +46,15 @@ export class IzdavacFormComponent implements OnInit {
   }
 
   private add() {
-    this.izdavacService.addIzdavaca(this.izdavacForm.value).subscribe(res => {
+    this.kupacService.addKupca(this.kupacForm.value).subscribe(res => {
     }, err => {
       console.log(err);
     });
-    this.router.navigateByUrl('izdavac');
+    this.router.navigateByUrl('kupac');
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Izdavac je uspesno dodat!',
+      title: 'Kupac je uspesno dodat!',
       showConfirmButton: false,
       timer: 1500
     });
@@ -74,24 +74,27 @@ export class IzdavacFormComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Izdavac je uspesno izmenjen!',
+          title: 'Kupac je uspesno izmenjen!',
           showConfirmButton: false,
           timer: 1500
         });
-        this.izdavacService.updateIzdavaca(this.id, this.izdavacForm.value).subscribe(res => {
+        this.kupacService.updateKupca(this.id, this.kupacForm.value).subscribe(res => {
         }, err => {
           console.log(err);
         });
-        this.router.navigateByUrl('izdavac');
+        this.router.navigateByUrl('kupac');
       }
     });
   }
 
-  private createIzdavacForm() {
+  private createKupacForm() {
     return this.formBuilder.group({
-      'NazivIzdavaca':['', Validators.compose([Validators.required])],
-      'GodinaOsnivanja':['', Validators.compose([Validators.required])],
-      'DrzavaOsnivanja':['', Validators.compose([Validators.required])]
+      'ImeKupca':['', Validators.compose([Validators.required])],
+      'PrezimeKupca':['', Validators.compose([Validators.required])],
+      'AdresaKupca':['', Validators.compose([Validators.required])],
+      'GradKupca':['', Validators.compose([Validators.required])],
+      'KontaktKupca':['', Validators.compose([Validators.required])],
+      'EMailKupca':['', Validators.compose([Validators.required])]
     });
   }
 
