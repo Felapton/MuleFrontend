@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { KnjigaService } from './Services/knjiga.service';
 import { HomeComponent } from './Components/home/home.component';
 import { TipKnjigeService } from './Services/tip-knjige.service';
@@ -17,6 +17,7 @@ import { ClanskaKartaComponent } from './Components/clanska-karta/clanska-karta.
 import { PisacComponent } from './Components/pisac/pisac.component';
 import { NagradaComponent } from './Components/nagrada/nagrada.component';
 import { ProdajaComponent } from './Components/prodaja/prodaja.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,16 +32,20 @@ import { ProdajaComponent } from './Components/prodaja/prodaja.component';
     ClanskaKartaComponent,
     PisacComponent,
     NagradaComponent,
-    ProdajaComponent
+    ProdajaComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     KnjigaService,
-    TipKnjigeService
+    TipKnjigeService,
+    HttpClient
   ],
   bootstrap: [AppComponent]
 })

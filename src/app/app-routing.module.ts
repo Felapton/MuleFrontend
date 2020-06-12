@@ -10,6 +10,8 @@ import { ClanskaKartaComponent } from './Components/clanska-karta/clanska-karta.
 import { PisacComponent } from './Components/pisac/pisac.component';
 import { NagradaComponent } from './Components/nagrada/nagrada.component';
 import { ProdajaComponent } from './Components/prodaja/prodaja.component';
+import { TipKnjigeFormComponent } from './Components/tip-knjige-form/tip-knjige-form.component';
+
 
 
 const routes: Routes = [
@@ -23,7 +25,10 @@ const routes: Routes = [
   {path: 'pisac', component: PisacComponent},
   {path: 'nagrada', component: NagradaComponent},
   {path: 'prodaja', component: ProdajaComponent},
+  {path: 'dodajTip', component: TipKnjigeFormComponent},
+  {path: 'dodajTip/:id', component: TipKnjigeFormComponent},
   {path: '**', component: PageNotFoundComponent}
+
 ];
 
 @NgModule({
