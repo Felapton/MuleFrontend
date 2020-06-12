@@ -46,7 +46,6 @@ export class TipKnjigeComponent implements OnInit {
           console.log(err);
         });
         this.data.splice(index,1);
-
       }
     });
   }

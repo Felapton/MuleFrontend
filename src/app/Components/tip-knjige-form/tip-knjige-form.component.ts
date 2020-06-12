@@ -13,7 +13,6 @@ export class TipKnjigeFormComponent implements OnInit {
 
   public id;
   public tipForm: FormGroup;
-  public item;
 
   constructor(private formBuilder: FormBuilder,
     private tipService: TipKnjigeService,
@@ -73,9 +72,6 @@ export class TipKnjigeFormComponent implements OnInit {
     }).then((result) => {
       if (result.value) {
         this.tipService.updateTipKnjige(this.id, this.tipForm.value).subscribe(res => {
-          this.item = res;
-          console.log(res);
-          this.tipForm.setValue({NazivTipa: this.item.NazivTipa})
         }, err => {
           console.log(err);
         });
