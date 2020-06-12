@@ -1,36 +1,36 @@
-import { Component, OnInit, ɵCompiler_compileModuleSync__POST_R3__, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__ } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { TipKnjigeService } from 'src/app/Services/tip-knjige.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PisacService } from 'src/app/Services/pisac.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-tip-knjige-form',
-  templateUrl: './tip-knjige-form.component.html',
-  styleUrls: ['./tip-knjige-form.component.css']
+  selector: 'app-pisac-form',
+  templateUrl: './pisac-form.component.html',
+  styleUrls: ['./pisac-form.component.css']
 })
-export class TipKnjigeFormComponent implements OnInit {
+export class PisacFormComponent implements OnInit {
 
   public id;
-  public tipForm: FormGroup;
+  public pisacForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
-    private tipService: TipKnjigeService,
+    private pisacService: PisacService,
     private router: Router,
     private route: ActivatedRoute) { 
-    this.tipForm = this.createTipForm();
+    this.pisacForm = this.createPisacForm();
   }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
     if(this.id) {
-      this.getTip();
+      this.getPisac();
     }
   }
 
-  private getTip() {
-    this.tipService.getTipKnjigeByID(this.id).subscribe(res => {
-      this.tipForm.patchValue(res);
+  private getPisac() {
+    this.pisacService.getPisacByID(this.id).subscribe(res => {
+      this.pisacForm.patchValue(res);
       console.log(res);
     }, err => {
       console.log(err);
@@ -46,20 +46,21 @@ export class TipKnjigeFormComponent implements OnInit {
   }
 
   private add() {
-    this.tipService.addTipKnjige(this.tipForm.value).subscribe(res => {
+    this.pisacService.addPisca(this.pisacForm.value).subscribe(res => {
     }, err => {
       console.log(err);
     });
-    this.router.navigateByUrl('tip');
+    this.router.navigateByUrl('pisac');
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Tip knjige je uspesno dodat!',
+      title: 'Pisac je uspesno dodat!',
       showConfirmButton: false,
       timer: 1500
     });
   }
 
+    
   private update() {
     Swal.fire({
       title: 'Da li ste sigurni?',
@@ -74,23 +75,27 @@ export class TipKnjigeFormComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Tip Knjige je uspesno izmenjen!',
+          title: 'Pisac je uspesno izmenjen!',
           showConfirmButton: false,
           timer: 1500
         });
-        this.tipService.updateTipKnjige(this.id, this.tipForm.value).subscribe(res => {
+        this.pisacService.updatePisac(this.id, this.pisacForm.value).subscribe(res => {
         }, err => {
           console.log(err);
         });
-        this.router.navigateByUrl('tip');
+        this.router.navigateByUrl('pisac');
       }
     });
   }
-
-  private createTipForm() {
+  
+  private createPisacForm() {
     return this.formBuilder.group({
-      'NazivTipa':['', Validators.compose([Validators.required])]
+      'ImePisca':['', Validators.compose([Validators.required])],
+      'PrezimePisca':['', Validators.compose([Validators.required])],
+      'GodinaRodjenja':[''],
+      'Nacionalnost':['']
     });
   }
-
+  
 }
+  

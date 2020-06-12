@@ -1,9 +1,7 @@
 <form [formGroup]="tipForm">
     <div class="form-control">
-        <p>
-            Naziv Tipa Knjige
+            <label>Naziv Tipa Knjige</label> 
             <input type="text" formControlName="NazivTipa">
-        </p>
     </div>
     <div>
         <button [disabled]="!tipForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>

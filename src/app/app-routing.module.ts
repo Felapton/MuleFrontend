@@ -11,6 +11,7 @@ import { PisacComponent } from './Components/pisac/pisac.component';
 import { NagradaComponent } from './Components/nagrada/nagrada.component';
 import { ProdajaComponent } from './Components/prodaja/prodaja.component';
 import { TipKnjigeFormComponent } from './Components/tip-knjige-form/tip-knjige-form.component';
+import { PisacFormComponent } from './Components/pisac-form/pisac-form.component';
 
 
 
@@ -23,6 +24,8 @@ const routes: Routes = [
   {path: 'kupac', component: KupacComponent},
   {path: 'clanska', component: ClanskaKartaComponent},
   {path: 'pisac', component: PisacComponent},
+  {path: 'dodajPisca', component: PisacFormComponent},
+  {path: 'dodajPisca/:id', component: PisacFormComponent},
   {path: 'nagrada', component: NagradaComponent},
   {path: 'prodaja', component: ProdajaComponent},
   {path: 'dodajTip', component: TipKnjigeFormComponent},

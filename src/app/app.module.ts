@@ -18,6 +18,7 @@ import { PisacComponent } from './Components/pisac/pisac.component';
 import { NagradaComponent } from './Components/nagrada/nagrada.component';
 import { ProdajaComponent } from './Components/prodaja/prodaja.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PisacFormComponent } from './Components/pisac-form/pisac-form.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PisacComponent,
     NagradaComponent,
     ProdajaComponent,
+    PisacFormComponent,
 
   ],
   imports: [
