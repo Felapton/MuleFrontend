@@ -1,0 +1,24 @@
+<form [formGroup]="pisacForm">
+    <div class="form-control">
+        <div class="form-group">
+            <label>Ime Pisca*</label> 
+            <input type="text" formControlName="ImePisca">
+        </div>
+        <div class="form-group">
+            <label>Prezime Pisca*</label> 
+            <input type="text" formControlName="PrezimePisca">
+        </div>
+        <div class="form-group">
+            <label>Godina Rodjenja</label> 
+            <input type="text" formControlName="GodinaRodjenja">
+        </div>
+        <div class="form-group">
+            <label>Nacionalnost</label> 
+            <input type="text" formControlName="Nacionalnost">
+        </div>
+    </div>
+    <div>
+        <button [disabled]="!pisacForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>
+        <button [disabled]="!pisacForm.valid" *ngIf="this.id" (click)="submit()" class="myButton">Uredi</button>
+    </div>
+</form>

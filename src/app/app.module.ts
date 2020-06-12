@@ -18,6 +18,7 @@ import { PisacComponent } from './Components/pisac/pisac.component';
 import { NagradaComponent } from './Components/nagrada/nagrada.component';
 import { ProdajaComponent } from './Components/prodaja/prodaja.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PisacFormComponent } from './Components/pisac-form/pisac-form.component';
 import { IzdavacFormComponent } from './Components/izdavac-form/izdavac-form.component';
 import { IzdavacComponent } from './Components/izdavac/izdavac.component';
 
@@ -35,8 +36,10 @@ import { IzdavacComponent } from './Components/izdavac/izdavac.component';
     PisacComponent,
     NagradaComponent,
     ProdajaComponent,
+    PisacFormComponent,
     IzdavacFormComponent,
     IzdavacComponent,
+
 
   ],
   imports: [
