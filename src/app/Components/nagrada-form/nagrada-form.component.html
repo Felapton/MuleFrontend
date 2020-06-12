@@ -1,0 +1,12 @@
+<form [formGroup]="nagradaForm">
+    <div class="form-control">
+        <div class="form-group">            
+            <label>Naziv Nagrade</label>
+            <input type="text" formControlName="NagradaNaziv">
+        </div>
+    </div>
+    <div>
+        <button [disabled]="!nagradaForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>
+        <button [disabled]="!nagradaForm.valid" *ngIf="this.id" (click)="submit()" class="myButton">Uredi</button>
+    </div>
+</form>

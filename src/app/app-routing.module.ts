@@ -16,6 +16,7 @@ import { IzdavacComponent } from './Components/izdavac/izdavac.component';
 import { IzdavacFormComponent } from './Components/izdavac-form/izdavac-form.component';
 import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.component';
 import { KupacFormComponent } from './Components/kupac-form/kupac-form.component';
+import { NagradaFormComponent } from './Components/nagrada-form/nagrada-form.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,8 @@ const routes: Routes = [
   {path: 'dodajPisca', component: PisacFormComponent},
   {path: 'dodajPisca/:id', component: PisacFormComponent},
   {path: 'nagrada', component: NagradaComponent},
+  {path: 'dodajNagradu', component: NagradaFormComponent},
+  {path: 'dodajNagradu/:id', component: NagradaFormComponent},
   {path: 'izdavac', component: IzdavacComponent},
   {path: 'dodajIzdavaca', component: IzdavacFormComponent},
   {path: 'dodajIzdavaca/:id', component: IzdavacFormComponent},
