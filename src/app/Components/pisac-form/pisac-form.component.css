@@ -13,11 +13,7 @@
 	padding:6px 24px;
 	text-decoration:none;
     text-shadow:0px 1px 0px #ffffff;
-    margin:5px;
-    position:absolute;
-    transition: .5s ease;
-    top: 50%;
-    left: 10%;
+    margin-top: 15%;
 }
 .myButton:hover {
 	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
