@@ -1,0 +1,32 @@
+<form [formGroup]="kupacForm">
+    <div class="form-control">
+        <div class="form-group">
+            <label>Ime</label>            
+            <input type="text" formControlName="ImeKupca">
+        </div>
+        <div class="form-group">
+            <label>Prezime</label>            
+            <input type="text" formControlName="PrezimeKupca">
+        </div>
+        <div class="form-group">
+            <label>Adresa </label>            
+            <input type="text" formControlName="AdresaKupca">
+        </div>
+        <div class="form-group">
+            <label>Grad</label>            
+            <input type="text" formControlName="GradKupca">
+        </div>
+        <div class="form-group">
+            <label>Kontakt</label>            
+            <input type="text" formControlName="KontaktKupca">
+        </div>
+        <div class="form-group">
+            <label>E-mail</label>            
+            <input type="text" formControlName="EMailKupca">
+        </div>
+    </div>
+    <div>
+        <button [disabled]="!kupacForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>
+        <button [disabled]="!kupacForm.valid" *ngIf="this.id" (click)="submit()" class="myButton">Uredi</button>
+    </div>
+</form>

@@ -22,6 +22,8 @@ import { PisacFormComponent } from './Components/pisac-form/pisac-form.component
 import { IzdavacFormComponent } from './Components/izdavac-form/izdavac-form.component';
 import { IzdavacComponent } from './Components/izdavac/izdavac.component';
 import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.component';
+import { KupacFormComponent } from './Components/kupac-form/kupac-form.component';
+
 
 @NgModule({
   declarations: [
@@ -41,15 +43,14 @@ import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.
     IzdavacFormComponent,
     IzdavacComponent,
     KorisnikFormComponent,
-
-
+    KupacFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,    
   ],
   providers: [
     KnjigaService,
