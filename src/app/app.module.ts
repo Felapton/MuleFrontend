@@ -23,6 +23,7 @@ import { IzdavacFormComponent } from './Components/izdavac-form/izdavac-form.com
 import { IzdavacComponent } from './Components/izdavac/izdavac.component';
 import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.component';
 import { KupacFormComponent } from './Components/kupac-form/kupac-form.component';
+import { NagradaFormComponent } from './Components/nagrada-form/nagrada-form.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { KupacFormComponent } from './Components/kupac-form/kupac-form.component
     IzdavacComponent,
     KorisnikFormComponent,
     KupacFormComponent,
+    NagradaFormComponent,
   ],
   imports: [
     BrowserModule,
