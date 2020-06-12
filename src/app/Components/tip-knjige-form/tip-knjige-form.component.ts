@@ -1,7 +1,8 @@
-import { Component, OnInit, ɵCompiler_compileModuleSync__POST_R3__ } from '@angular/core';
+import { Component, OnInit, ɵCompiler_compileModuleSync__POST_R3__, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__ } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TipKnjigeService } from 'src/app/Services/tip-knjige.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-tip-knjige-form',
@@ -50,6 +51,13 @@ export class TipKnjigeFormComponent implements OnInit {
       console.log(err);
     });
     this.router.navigateByUrl('tip');
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Tip knjige je uspesno dodat!',
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
   private update() {
@@ -58,6 +66,13 @@ export class TipKnjigeFormComponent implements OnInit {
       console.log(err);
     });
     this.router.navigateByUrl('tip');
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Tip knjige je uspesno izmenjen!',
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
   private createTipForm() {

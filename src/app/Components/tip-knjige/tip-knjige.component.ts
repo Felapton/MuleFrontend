@@ -1,6 +1,7 @@
 import { Component, OnInit, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__ } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TipKnjigeService } from '../../Services/tip-knjige.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -23,11 +24,30 @@ export class TipKnjigeComponent implements OnInit {
   }
 
   public delete(id, index) {
-    this.svc.deleteTipKnjige(id).subscribe(res => {
-    }, err => {
-      console.log(err);
+    Swal.fire({
+      title: 'Da li ste sigurni?',
+      text: "Kada obrisete necete moci da vratite podatke!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Da, izbrisi!'
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Tip knjige je uspesno izbrisan!',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        this.svc.deleteTipKnjige(id).subscribe(res => {
+        }, err => {
+          console.log(err);
+        });
+        this.data.splice(index);
+      }
     });
-    this.data.splice(index);
   }
 
   private getTipKnjige() {
