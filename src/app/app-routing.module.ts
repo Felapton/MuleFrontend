@@ -12,6 +12,9 @@ import { NagradaComponent } from './Components/nagrada/nagrada.component';
 import { ProdajaComponent } from './Components/prodaja/prodaja.component';
 import { TipKnjigeFormComponent } from './Components/tip-knjige-form/tip-knjige-form.component';
 import { PisacFormComponent } from './Components/pisac-form/pisac-form.component';
+import { IzdavacComponent } from './Components/izdavac/izdavac.component';
+import { IzdavacFormComponent } from './Components/izdavac-form/izdavac-form.component';
+
 
 
 
@@ -27,11 +30,13 @@ const routes: Routes = [
   {path: 'dodajPisca', component: PisacFormComponent},
   {path: 'dodajPisca/:id', component: PisacFormComponent},
   {path: 'nagrada', component: NagradaComponent},
+  {path: 'izdavac', component: IzdavacComponent},
+  {path: 'dodajIzdavaca', component: IzdavacFormComponent},
+  {path: 'dodajIzdavaca/:id', component: IzdavacFormComponent},
   {path: 'prodaja', component: ProdajaComponent},
   {path: 'dodajTip', component: TipKnjigeFormComponent},
   {path: 'dodajTip/:id', component: TipKnjigeFormComponent},
   {path: '**', component: PageNotFoundComponent}
-
 ];
 
 @NgModule({

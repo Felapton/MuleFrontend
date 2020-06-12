@@ -1,0 +1,20 @@
+<form [formGroup]="izdavacForm">
+    <div class="form-control">
+        <div class="form-group">            
+            <label>Naziv Izdavaca</label>
+            <input type="text" formControlName="NazivIzdavaca">
+        </div>
+        <div class="form-group">
+            <label>Godina Osnivanja</label>            
+            <input type="text" formControlName="GodinaOsnivanja">
+        </div>
+        <div class="form-group">
+            <label>Drzava Osnivanja</label>            
+            <input type="text" formControlName="DrzavaOsnivanja">
+        </div>
+    </div>
+    <div>
+        <button [disabled]="!izdavacForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>
+        <button [disabled]="!izdavacForm.valid" *ngIf="this.id" (click)="submit()" class="myButton">Uredi</button>
+    </div>
+</form>
