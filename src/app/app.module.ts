@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PisacFormComponent } from './Components/pisac-form/pisac-form.component';
 import { IzdavacFormComponent } from './Components/izdavac-form/izdavac-form.component';
 import { IzdavacComponent } from './Components/izdavac/izdavac.component';
+import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { IzdavacComponent } from './Components/izdavac/izdavac.component';
     PisacFormComponent,
     IzdavacFormComponent,
     IzdavacComponent,
+    KorisnikFormComponent,
 
 
   ],

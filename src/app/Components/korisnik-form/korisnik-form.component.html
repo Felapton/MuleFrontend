@@ -1,0 +1,40 @@
+<form [formGroup]="korisnikForm">
+    <div class="form-control">
+        <div class="form-group">            
+            <label>Username</label>
+            <input type="text" formControlName="Username">
+        </div>
+        <div class="form-group">
+            <label>Password</label>            
+            <input type="text" formControlName="Password">
+        </div>
+        <div class="form-group">
+            <label>Ime</label>            
+            <input type="text" formControlName="ImeKorisnika">
+        </div>
+        <div class="form-group">
+            <label>Prezime</label>            
+            <input type="text" formControlName="PrezimeKorisnika">
+        </div>
+        <div class="form-group">
+            <label>Adresa </label>            
+            <input type="text" formControlName="AdresaKorisnika">
+        </div>
+        <div class="form-group">
+            <label>Grad</label>            
+            <input type="text" formControlName="GradKorisnika">
+        </div>
+        <div class="form-group">
+            <label>Kontakt</label>            
+            <input type="text" formControlName="KontaktKorisnika">
+        </div>
+        <div class="form-group">
+            <label>E-mail</label>            
+            <input type="text" formControlName="EMailKorisnika">
+        </div>
+    </div>
+    <div>
+        <button [disabled]="!korisnikForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>
+        <button [disabled]="!korisnikForm.valid" *ngIf="this.id" (click)="submit()" class="myButton">Uredi</button>
+    </div>
+</form>
