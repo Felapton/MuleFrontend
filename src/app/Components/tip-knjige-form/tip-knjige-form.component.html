@@ -1,1 +1,9 @@
-<p>tip-knjige-form works!</p>
+<form [formGroup]="tipForm">
+    <div class="form-control">
+        <input type="text" formControlName="NazivTipa">
+    </div>
+    <div>
+        <button [disabled]="!tipForm.valid" *ngIf="!this.id" (click)="submit()">Dodaj</button>
+        <button [disabled]="!tipForm.valid" *ngIf="this.id" (click)="submit()">Uredi</button>
+    </div>
+</form>

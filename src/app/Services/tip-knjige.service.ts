@@ -17,5 +17,17 @@ export class TipKnjigeService {
     return this.http.post(`http://localhost:8081/api/tipknjige`, data);
   }
 
+  public deleteTipKnjige(id: any): Observable<any>{
+    return this.http.delete(`http://localhost:8081/api/tipknjige/${id}`)
+  }
+
+  public getTipKnjigeByID(id: any): Observable<any> {
+    return this.http.get(`http://localhost:8081/api/tipknjige/${id}`);
+  }
+
+  public updateTipKnjige(id: any, data: any): Observable<any> {
+    return this.http.put(`http://localhost:8081/api/tipknjige/${id}`, data);
+  }
+
 
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit, ɵSWITCH_TEMPLATE_REF_FACTORY__POST_R3__ } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TipKnjigeService } from '../../Services/tip-knjige.service';
-import Swal from 'sweetalert2';
 
 
 @Component({
@@ -23,6 +22,14 @@ export class TipKnjigeComponent implements OnInit {
     }
   }
 
+  public delete(id, index) {
+    this.svc.deleteTipKnjige(id).subscribe(res => {
+    }, err => {
+      console.log(err);
+    });
+    this.data.splice(index);
+  }
+
   private getTipKnjige() {
     this.data = [];
     this.svc.getTipKnjige().subscribe(res => {
@@ -32,16 +39,4 @@ export class TipKnjigeComponent implements OnInit {
     });
   }
 
-  private addTipKnjige(result){
-    const data = {NazivTipa: result[0]};
-    this.svc.addTipKnjige(data).subscribe(res => {
-      Swal.fire({
-        title: 'You have successfully added ' + result[0],
-        icon: 'success'
-      });
-      this.getTipKnjige();
-    }, err => {
-      console.log(err);
-    });
-  }
 }
