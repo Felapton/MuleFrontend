@@ -29,4 +29,8 @@ export class PisacService {
     return this.http.put(`http://localhost:8081/api/pisci/${id}`, data);
   }
 
+  public getKnjigeByPisac(id:any): Observable<any>{
+    return this.http.get(`http://localhost:8081/api/knjigePisci/pisac/${id}`)
+  }
+
 }

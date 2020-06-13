@@ -30,4 +30,8 @@ export class KnjigaService {
   public updateKnjigu(id: any, data: any): Observable<any> {
     return this.http.put(`http://localhost:8081/api/knjiga/${id}`, data);
   }
+
+  public addKnjiguPiscu(data: any): Observable<any> {
+    return this.http.post(`http://localhost:8081/api/knjigePisci/`, data);
+  }
 }

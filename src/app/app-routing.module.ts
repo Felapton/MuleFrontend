@@ -20,6 +20,8 @@ import { NagradaFormComponent } from './Components/nagrada-form/nagrada-form.com
 import { KnjigaFormComponent } from './Components/knjiga-form/knjiga-form.component';
 import { ProdajaFormComponent } from './Components/prodaja-form/prodaja-form.component';
 import { ClanskaKartaFormComponent } from './Components/clanska-karta-form/clanska-karta-form.component';
+import { PisacInfoComponent } from './Components/pisac-info/pisac-info.component';
+import { KnjigaPiscuFormComponent } from './Components/knjiga-piscu-form/knjiga-piscu-form.component';
 
 
 const routes: Routes = [
@@ -28,6 +30,7 @@ const routes: Routes = [
   {path: 'knjiga', component: KnjigaComponent},
   {path: 'dodajKnjigu', component: KnjigaFormComponent},
   {path: 'dodajKnjigu/:id', component: KnjigaFormComponent},
+  {path: 'dodajKnjiguPiscu', component: KnjigaPiscuFormComponent},
   {path: 'tip', component: TipKnjigeComponent},
   {path: 'korisnik', component: KorisnikComponent},
   {path: 'dodajKorisnika', component: KorisnikFormComponent},
@@ -39,6 +42,7 @@ const routes: Routes = [
   {path: 'dodajClansku', component: ClanskaKartaFormComponent},
   {path: 'dodajClansku/:id', component: ClanskaKartaFormComponent},
   {path: 'pisac', component: PisacComponent},
+  {path: 'pisac/:id', component: PisacInfoComponent},
   {path: 'dodajPisca', component: PisacFormComponent},
   {path: 'dodajPisca/:id', component: PisacFormComponent},
   {path: 'nagrada', component: NagradaComponent},
