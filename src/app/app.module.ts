@@ -29,6 +29,8 @@ import { ProdajaFormComponent } from './Components/prodaja-form/prodaja-form.com
 import {DropdownModule} from 'primeng/dropdown';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ClanskaKartaFormComponent } from './Components/clanska-karta-form/clanska-karta-form.component';
+import { PisacInfoComponent } from './Components/pisac-info/pisac-info.component';
+import { KnjigaPiscuFormComponent } from './Components/knjiga-piscu-form/knjiga-piscu-form.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { ClanskaKartaFormComponent } from './Components/clanska-karta-form/clans
     NagradaFormComponent,
     KnjigaFormComponent,
     ProdajaFormComponent,
-    ClanskaKartaFormComponent
+    ClanskaKartaFormComponent,
+    PisacInfoComponent,
+    KnjigaPiscuFormComponent
   ],
   imports: [
     BrowserModule,
