@@ -29,4 +29,8 @@ export class IzdavacService {
     return this.http.put(`http://localhost:8081/api/izdavac/${id}`, data);
   }
 
+  public getKnjigeByIzdavac(id: any): Observable<any> {
+    return this.http.get(`http://localhost:8081/api/knjigaIzdavac/izdavac/${id}`)
+  }
+
 }
