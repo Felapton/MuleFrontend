@@ -44,7 +44,7 @@ export class ProdajaComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Izdavac je uspesno izbrisan!',
+          title: 'Prodaja je uspesno izbrisana!',
           showConfirmButton: false,
           timer: 1500
         });

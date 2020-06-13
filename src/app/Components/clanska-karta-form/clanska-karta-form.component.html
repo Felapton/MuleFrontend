@@ -1,0 +1,27 @@
+<form [formGroup]="clanskaForm">
+    <div class="form-control">
+        <div class="form-group">            
+            <label>Broj Clanske Karte</label>
+            <input type="text" formControlName="BrojClanskeKarte">
+        </div>
+        <div class="form-group">            
+            <label>Vreme isteka</label>
+            <input type="text" formControlName="VremeIsteka">
+        </div>
+    </div>
+</form>
+<div class="dropDowns" >
+    <div class="form-group" *ngIf="korisnici.length > 0">            
+        <label>Korisnik</label>
+        <p-dropdown [options]="korisnici" [(ngModel)]="korisnik"></p-dropdown>
+    </div>
+    <div class="form-group" *ngIf="kupci.length > 0">            
+        <label>Kupac</label>
+        <p-dropdown [options]="kupci" [(ngModel)]="kupac"></p-dropdown>
+    </div>
+</div>
+
+<div>
+    <button [disabled]="!clanskaForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>
+    <button [disabled]="!clanskaForm.valid" *ngIf="this.id" (click)="submit()" class="myButton">Uredi</button>
+</div>
