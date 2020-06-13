@@ -1,0 +1,24 @@
+<form [formGroup]="knForm">
+    <div class="form-control">
+        <div class="form-group">
+            <label>Godina Osvajanja</label>            
+            <input type="text" formControlName="GodinaOsvajanja">
+        </div>
+    </div>
+</form>
+
+<div class="dropDowns" >
+    <div class="form-group" *ngIf="nagrade.length > 0">            
+        <label>Nagrada</label>
+        <p-dropdown [options]="nagrade" [(ngModel)]="nagrada"></p-dropdown>
+    </div>
+    <div class="form-group" *ngIf="knjige.length > 0">            
+        <label>Knjiga</label>
+        <p-dropdown [options]="knjige" [(ngModel)]="knjiga"></p-dropdown>
+    </div>
+</div>
+
+<div>
+    <button [disabled]="!knForm.valid"  (click)="submit()" class="myButton">Dodaj</button>
+</div>
+

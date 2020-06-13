@@ -1,0 +1,36 @@
+<table class="darkTable">
+    <tbody *ngFor="let item of data;">
+    <tr>
+        <td>Naziv Nagrade</td>
+        <td style ="text-align: center;">{{item.NagradaNaziv}}</td>
+    </tr>
+</table>
+
+<tbody *ngFor="let item of data; let i = index">
+    <a class="myButton" href = 'http://localhost:4200/dodajNagradu/{{item.NagradaID}}'>Uredi</a>                   
+    <button (click)="delete(item.NagradaID,i)" class="myButton">Izbrisi</button>
+</tbody>
+
+
+<h2 *ngFor="let item of data;">Knjige koje su osvojile {{item.NagradaNaziv}}</h2>
+<a href = 'http://localhost:4200/dodajKnjiguNagradi' class="addButton">Dodaj</a>
+<div class="col-md-12">
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>Naziv Knjige</th>
+                <th>Cena</th>
+                <th>Na stanju</th>
+                <th>Godina Osvajanja</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let knjiga of knjige;">
+            <tr>
+                <td style ="text-align: center;">{{knjiga.knjiga.NazivKnjige}}</td>
+                <td style ="text-align: center;">{{knjiga.knjiga.Cena}}</td>
+                <td style ="text-align: center;">{{knjiga.knjiga.KolicinaNaStanju}}</td>
+                <td style ="text-align: center;">{{knjiga.godinaOsvajanja}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

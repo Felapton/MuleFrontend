@@ -28,4 +28,8 @@ export class NagradaService {
   public updateNagradu(id: any, data: any): Observable<any> {
     return this.http.put(`http://localhost:8081/api/nagrada/${id}`, data);
   }
+
+  public getKnjigeByNagrada(id:any): Observable<any>{
+    return this.http.get(`http://localhost:8081/api/knjigaNagrada/nagrada/${id}`)
+  }
 }
