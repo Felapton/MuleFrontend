@@ -1,47 +1,46 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ProdajaService } from 'src/app/Services/prodaja.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import Swal from 'sweetalert2';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ClanskaKartaService } from 'src/app/Services/clanska-karta.service';
 import { KorisnikService } from 'src/app/Services/korisnik.service';
 import { KupacService } from 'src/app/Services/kupac.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-prodaja-form',
-  templateUrl: './prodaja-form.component.html',
-  styleUrls: ['./prodaja-form.component.css']
+  selector: 'app-clanska-karta-form',
+  templateUrl: './clanska-karta-form.component.html',
+  styleUrls: ['./clanska-karta-form.component.css']
 })
-export class ProdajaFormComponent implements OnInit {
-  
+export class ClanskaKartaFormComponent implements OnInit {
+
   public id;
-  public prodajaForm: FormGroup;
+  public clanskaForm: FormGroup;
   public korisnici = [];
   public kupci = [];
   public korisnik;
   public kupac;
-
-  constructor(
-    private formBuilder: FormBuilder,
-    private prodajaService: ProdajaService,
+  
+  constructor(private formBuilder: FormBuilder,
+    private clanskaService: ClanskaKartaService,
     private korisnikService: KorisnikService,
     private kupacService: KupacService,
     private router: Router,
     private route: ActivatedRoute) {
-    this.prodajaForm = this.createProdajaForm();
-   }
+      this.clanskaForm = this.createClanskaForm();
+    }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
     if(this.id) {
-      this.getProdaja();
+      this.getClanska();
     }
     this.getKorisnike();
     this.getKupce();
   }
 
-  private getProdaja() {
-    this.prodajaService.getProdajaById(this.id).subscribe(res => {
-      this.prodajaForm.patchValue(res[0]);
+  private getClanska() {
+    this.clanskaService.getClanskuByID(this.id).subscribe(res => {
+      this.clanskaForm.patchValue(res[0]);
       console.log(res);
     }, err => {
       console.log(err);
@@ -57,25 +56,25 @@ export class ProdajaFormComponent implements OnInit {
   }
 
   private add() {
-    this.prodajaForm.patchValue({KorisnikID: this.korisnik});
-    this.prodajaForm.patchValue({KupacID: this.kupac});
-    this.prodajaService.addProdaju(this.prodajaForm.value).subscribe(res => {
+    this.clanskaForm.patchValue({KorisnikID: this.korisnik});
+    this.clanskaForm.patchValue({KupacID: this.kupac});
+    this.clanskaService.addClansku(this.clanskaForm.value).subscribe(res => {
     }, err => {
       console.log(err);
     });
-    this.router.navigateByUrl('prodaja');
+    this.router.navigateByUrl('clanska');
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Prodaja je uspesno dodata!',
+      title: 'Clanska karta je uspesno dodata!',
       showConfirmButton: false,
       timer: 1500
     });
   }
 
   private update() {
-    this.prodajaForm.patchValue({KorisnikID: this.korisnik});
-    this.prodajaForm.patchValue({KupacID: this.kupac});
+    this.clanskaForm.patchValue({KorisnikID: this.korisnik});
+    this.clanskaForm.patchValue({KupacID: this.kupac});
     Swal.fire({
       title: 'Da li ste sigurni?',
       text: "Kada izmenite necete moci da vratite podatke!",
@@ -93,12 +92,12 @@ export class ProdajaFormComponent implements OnInit {
           showConfirmButton: false,
           timer: 1500
         });
-        this.prodajaService.updateProdaju(this.id, this.prodajaForm.value).subscribe(res => {
+        this.clanskaService.updateClansku(this.id, this.clanskaForm.value).subscribe(res => {
           console.log(res);
         }, err => {
           console.log(err);
         });
-        this.router.navigateByUrl('prodaja');
+        this.router.navigateByUrl('clanska');
       }
     });
   }
@@ -126,10 +125,10 @@ export class ProdajaFormComponent implements OnInit {
     });
   }
 
-  private createProdajaForm() {
+  private createClanskaForm() {
     return this.formBuilder.group({
-      'Datum':[new Date(Date.now()).toISOString().substr(0,20)],
-      'UkupnaCena':['', Validators.compose([Validators.required])],
+      'BrojClanskeKarte':['',Validators.compose([Validators.required])],
+      'VremeIsteka':['', Validators.compose([Validators.required])],
       'KorisnikID':[''],
       'KupacID':['']
     });
