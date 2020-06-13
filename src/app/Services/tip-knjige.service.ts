@@ -29,5 +29,8 @@ export class TipKnjigeService {
     return this.http.put(`http://localhost:8081/api/tipknjige/${id}`, data);
   }
 
+  public getKnjigeByTip(id: any): Observable<any> {
+    return this.http.get(`http://localhost:8081/api/knjigaTip/tip/${id}`)
+  }
 
 }

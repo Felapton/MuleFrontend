@@ -22,6 +22,7 @@ import { ProdajaFormComponent } from './Components/prodaja-form/prodaja-form.com
 import { ClanskaKartaFormComponent } from './Components/clanska-karta-form/clanska-karta-form.component';
 import { PisacInfoComponent } from './Components/pisac-info/pisac-info.component';
 import { KnjigaPiscuFormComponent } from './Components/knjiga-piscu-form/knjiga-piscu-form.component';
+import { TipInfoComponent } from './Components/tip-info/tip-info.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'dodajKnjigu/:id', component: KnjigaFormComponent},
   {path: 'dodajKnjiguPiscu', component: KnjigaPiscuFormComponent},
   {path: 'tip', component: TipKnjigeComponent},
+  {path: 'tip/:id', component: TipInfoComponent},
   {path: 'korisnik', component: KorisnikComponent},
   {path: 'dodajKorisnika', component: KorisnikFormComponent},
   {path: 'dodajKorisnika/:id', component: KorisnikFormComponent},

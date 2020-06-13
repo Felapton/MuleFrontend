@@ -1,0 +1,27 @@
+<h2 *ngFor="let item of data">{{item.NazivTipa}}</h2>
+
+<tbody *ngFor="let item of data; let i = index">
+    <a class="myButton" href = 'http://localhost:4200/dodajTip/{{item.TipID}}'>Uredi</a>                   
+    <button (click)="delete(item.TipID,i)" class="myButton">Izbrisi</button>
+</tbody>
+
+
+<h2 *ngFor="let item of data;">Knjige koje pripadaju {{item.NazivTipa}}</h2>
+<div class="col-md-12">
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>Naziv Knjige</th>
+                <th>Cena</th>
+                <th>Na stanju</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let knjiga of knjige">
+            <tr>
+                <td style ="text-align: center;">{{knjiga.knjiga.NazivKnjige}}</td>
+                <td style ="text-align: center;">{{knjiga.knjiga.Cena}}</td>
+                <td style ="text-align: center;">{{knjiga.knjiga.KolicinaNaStanju}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
