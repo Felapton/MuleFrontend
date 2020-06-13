@@ -50,7 +50,6 @@ export class NagradaFormComponent implements OnInit {
     }, err => {
       console.log(err);
     });
-    this.router.navigateByUrl('nagrada');
     Swal.fire({
       position: 'top-end',
       icon: 'success',
@@ -58,6 +57,7 @@ export class NagradaFormComponent implements OnInit {
       showConfirmButton: false,
       timer: 1500
     });
+    this.router.navigateByUrl('nagrada');
   }
 
   private update() {

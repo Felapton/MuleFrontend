@@ -12,4 +12,20 @@ export class ProdajaService {
   public getProdaje() : Observable<any>{
     return this.http.get<any[]>(`http://localhost:8081/api/prodaja`);
   }
+
+  public addProdaju(data: any): Observable<any>{
+    return this.http.post(`http://localhost:8081/api/prodaja`, data);
+  }
+
+  public deleteProdaju(id: any): Observable<any>{
+    return this.http.delete(`http://localhost:8081/api/prodaja/${id}`)
+  }
+
+  public getProdajaById(id: any): Observable<any> {
+    return this.http.get(`http://localhost:8081/api/prodaja/${id}`);
+  }
+
+  public updateProdaju(id: any, data: any): Observable<any> {
+    return this.http.put(`http://localhost:8081/api/prodaja/${id}`, data);
+}
 }

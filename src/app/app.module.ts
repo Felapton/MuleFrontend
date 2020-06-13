@@ -25,7 +25,9 @@ import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.
 import { KupacFormComponent } from './Components/kupac-form/kupac-form.component';
 import { NagradaFormComponent } from './Components/nagrada-form/nagrada-form.component';
 import { KnjigaFormComponent } from './Components/knjiga-form/knjiga-form.component';
-
+import { ProdajaFormComponent } from './Components/prodaja-form/prodaja-form.component';
+import {DropdownModule} from 'primeng/dropdown';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -48,13 +50,16 @@ import { KnjigaFormComponent } from './Components/knjiga-form/knjiga-form.compon
     KupacFormComponent,
     NagradaFormComponent,
     KnjigaFormComponent,
+    ProdajaFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,    
+    ReactiveFormsModule, 
+    DropdownModule,
+    BrowserAnimationsModule
   ],
   providers: [
     KnjigaService,
