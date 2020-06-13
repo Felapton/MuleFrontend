@@ -17,12 +17,15 @@ import { IzdavacFormComponent } from './Components/izdavac-form/izdavac-form.com
 import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.component';
 import { KupacFormComponent } from './Components/kupac-form/kupac-form.component';
 import { NagradaFormComponent } from './Components/nagrada-form/nagrada-form.component';
+import { KnjigaFormComponent } from './Components/knjiga-form/knjiga-form.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'knjiga', component: KnjigaComponent},
+  {path: 'dodajKnjigu', component: KnjigaFormComponent},
+  {path: 'dodajKnjigu/:id', component: KnjigaFormComponent},
   {path: 'tip', component: TipKnjigeComponent},
   {path: 'korisnik', component: KorisnikComponent},
   {path: 'dodajKorisnika', component: KorisnikFormComponent},

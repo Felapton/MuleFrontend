@@ -1,0 +1,20 @@
+<form [formGroup]="knjigaForm">
+    <div class="form-control">
+        <div class="form-group">            
+            <label>Naziv Knjige</label>
+            <input type="text" formControlName="NazivKnjige">
+        </div>
+        <div class="form-group">
+            <label>Cena</label>            
+            <input type="text" formControlName="Cena">
+        </div>
+        <div class="form-group">
+            <label>Kolicina na stanju</label>            
+            <input type="text" formControlName="KolicinaNaStanju">
+        </div>
+    </div>
+    <div>
+        <button [disabled]="!knjigaForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>
+        <button [disabled]="!knjigaForm.valid" *ngIf="this.id" (click)="submit()" class="myButton">Uredi</button>
+    </div>
+</form>
