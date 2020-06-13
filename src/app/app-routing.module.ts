@@ -18,6 +18,7 @@ import { KorisnikFormComponent } from './Components/korisnik-form/korisnik-form.
 import { KupacFormComponent } from './Components/kupac-form/kupac-form.component';
 import { NagradaFormComponent } from './Components/nagrada-form/nagrada-form.component';
 import { KnjigaFormComponent } from './Components/knjiga-form/knjiga-form.component';
+import { ProdajaFormComponent } from './Components/prodaja-form/prodaja-form.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,8 @@ const routes: Routes = [
   {path: 'dodajIzdavaca', component: IzdavacFormComponent},
   {path: 'dodajIzdavaca/:id', component: IzdavacFormComponent},
   {path: 'prodaja', component: ProdajaComponent},
+  {path: 'dodajProdaju', component: ProdajaFormComponent},
+  {path: 'dodajProdaju/:id', component: ProdajaFormComponent},
   {path: 'dodajTip', component: TipKnjigeFormComponent},
   {path: 'dodajTip/:id', component: TipKnjigeFormComponent},
   {path: '**', component: PageNotFoundComponent}

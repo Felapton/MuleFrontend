@@ -1,0 +1,21 @@
+<form [formGroup]="prodajaForm">
+    <div class="form-control">
+        <div class="form-group">            
+            <label>Ukupna Cena</label>
+            <input type="text" formControlName="UkupnaCena">
+        </div>
+    </div>
+</form>
+
+<div class="form-group" *ngIf="korisnici.length > 0">            
+    <label>Korisnik</label>
+    <p-dropdown [options]="korisnici" [(ngModel)]="korisnik"></p-dropdown>
+</div>
+<div class="form-group" *ngIf="kupci.length > 0">            
+    <label>Kupac</label>
+    <p-dropdown [options]="kupci" [(ngModel)]="kupac"></p-dropdown>
+</div>
+<div>
+    <button [disabled]="!prodajaForm.valid" *ngIf="!this.id" (click)="submit()" class="myButton">Dodaj</button>
+    <button [disabled]="!prodajaForm.valid" *ngIf="this.id" (click)="submit()" class="myButton">Uredi</button>
+</div>
