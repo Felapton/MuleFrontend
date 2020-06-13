@@ -31,6 +31,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ClanskaKartaFormComponent } from './Components/clanska-karta-form/clanska-karta-form.component';
 import { PisacInfoComponent } from './Components/pisac-info/pisac-info.component';
 import { KnjigaPiscuFormComponent } from './Components/knjiga-piscu-form/knjiga-piscu-form.component';
+import { TipInfoComponent } from './Components/tip-info/tip-info.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { KnjigaPiscuFormComponent } from './Components/knjiga-piscu-form/knjiga-
     ProdajaFormComponent,
     ClanskaKartaFormComponent,
     PisacInfoComponent,
-    KnjigaPiscuFormComponent
+    KnjigaPiscuFormComponent,
+    TipInfoComponent
   ],
   imports: [
     BrowserModule,
