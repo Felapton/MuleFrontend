@@ -32,6 +32,9 @@ import { ClanskaKartaFormComponent } from './Components/clanska-karta-form/clans
 import { PisacInfoComponent } from './Components/pisac-info/pisac-info.component';
 import { KnjigaPiscuFormComponent } from './Components/knjiga-piscu-form/knjiga-piscu-form.component';
 import { TipInfoComponent } from './Components/tip-info/tip-info.component';
+import { IzdavacInfoComponent } from './Components/izdavac-info/izdavac-info.component';
+import { KnjigaIzdavacFormComponent } from './Components/knjiga-izdavac-form/knjiga-izdavac-form.component';
+
 
 @NgModule({
   declarations: [
@@ -58,7 +61,9 @@ import { TipInfoComponent } from './Components/tip-info/tip-info.component';
     ClanskaKartaFormComponent,
     PisacInfoComponent,
     KnjigaPiscuFormComponent,
-    TipInfoComponent
+    TipInfoComponent,
+    IzdavacInfoComponent,
+    KnjigaIzdavacFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,31 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { TipKnjigeService } from 'src/app/Services/tip-knjige.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { IzdavacService } from 'src/app/Services/izdavac.service';
+import { Router, ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-tip-info',
-  templateUrl: './tip-info.component.html',
-  styleUrls: ['./tip-info.component.css']
+  selector: 'app-izdavac-info',
+  templateUrl: './izdavac-info.component.html',
+  styleUrls: ['./izdavac-info.component.css']
 })
-export class TipInfoComponent implements OnInit {
+export class IzdavacInfoComponent implements OnInit {
 
   public data = [];
   public id;
   public knjige = [];
 
-  constructor(private svc: TipKnjigeService,
+  constructor(private svc: IzdavacService,
     private router: Router,
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id;
-    this.getTip();
-    this.getKnjigeByTip();
+    this.getIzdavac();
+    this.getKnjigeByIzdavac();
   }
 
-  private getTip() {
-    this.svc.getTipKnjigeByID(this.id).subscribe(res => {
+  private getIzdavac() {
+    this.svc.getIzdavacByID(this.id).subscribe(res => {
       this.data=this.data.concat(res);
       console.log(res);
     }, err => {
@@ -33,8 +33,8 @@ export class TipInfoComponent implements OnInit {
     });
   }
 
-  private getKnjigeByTip(){
-    this.svc.getKnjigeByTip(this.id).subscribe(res =>{
+  private getKnjigeByIzdavac(){
+    this.svc.getKnjigeByIzdavac(this.id).subscribe(res =>{
      this.knjige=this.knjige.concat(res);
      console.log(res);
     }, err=>{
@@ -56,19 +56,18 @@ export class TipInfoComponent implements OnInit {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Tip knjige je uspesno izbrisan!',
+          title: 'Izdavac je uspesno izbrisan!',
           showConfirmButton: false,
           timer: 1500
         });
-        this.svc.deleteTipKnjige(id).subscribe(res => {
+        this.svc.deleteIzdavaca(id).subscribe(res => {
         }, err => {
           console.log(err);
         });
         this.data.splice(index,1);
-        this.router.navigateByUrl('tip');
+        this.router.navigateByUrl('izdavac');
       }
     });
   }
-
 
 }

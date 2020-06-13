@@ -15,6 +15,7 @@
                 <td style ="text-align: center;">{{item.GodinaOsnivanja}}</td>
                 <td style ="text-align: center;">{{item.DrzavaOsnivanja}}</td>
                 <div class="btn-group">
+                    <a class="myButton" href = 'http://localhost:4200/izdavac/{{item.IzdavacID}}'>Vise informacija</a>                   
                     <a class="myButton" href = 'http://localhost:4200/dodajIzdavaca/{{item.IzdavacID}}'>Uredi</a>                   
                     <button (click)="delete(item.IzdavacID, i)" class="myButton">Izbrisi</button>
                 </div>
