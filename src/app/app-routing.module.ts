@@ -29,6 +29,8 @@ import { KnjigaNagradiFormComponent } from './Components/knjiga-nagradi-form/knj
 import { NagradaInfoComponent } from './Components/nagrada-info/nagrada-info.component';
 import { KnjigaInfoComponent } from './Components/knjiga-info/knjiga-info.component';
 import { KnjigaTipuFormComponent } from './Components/knjiga-tipu-form/knjiga-tipu-form.component';
+import { ProdajaInfoComponent } from './Components/prodaja-info/prodaja-info.component';
+import { KnjigaProdajiFormComponent } from './Components/knjiga-prodaji-form/knjiga-prodaji-form.component';
 
 
 const routes: Routes = [
@@ -66,6 +68,8 @@ const routes: Routes = [
   {path: 'dodajIzdavaca/:id', component: IzdavacFormComponent},
   {path: 'dodajKnjiguIzdavacu', component: KnjigaIzdavacFormComponent},
   {path: 'prodaja', component: ProdajaComponent},
+  {path: 'prodaja/:id', component: ProdajaInfoComponent},
+  {path: 'dodajKnjiguProdaji/:id', component: KnjigaProdajiFormComponent},
   {path: 'dodajProdaju', component: ProdajaFormComponent},
   {path: 'dodajProdaju/:id', component: ProdajaFormComponent},
   {path: 'dodajTip', component: TipKnjigeFormComponent},

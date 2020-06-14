@@ -46,6 +46,9 @@ export class KnjigaService {
   public addKnjiguTipu(data: any): Observable<any> {
     return this.http.post(`http://localhost:8081/api/knjigaTip/`, data);
   }
+  public addKnjiguProdaji(data: any): Observable<any> {
+    return this.http.post(`http://localhost:8081/api/prodajaKnjiga/`, data);
+  }
 
   public getNagradeByKnjiga(id:any): Observable<any>{
     return this.http.get(`http://localhost:8081/api/knjigaNagrada/knjiga/${id}`)

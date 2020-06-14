@@ -1,0 +1,19 @@
+<div class="dropDowns" >
+    <div class="form-group" *ngIf="knjige.length > 0">            
+        <label>Knjiga</label>
+        <p-dropdown [options]="knjige" [(ngModel)]="knjiga"></p-dropdown>
+    </div>
+</div>
+
+<form [formGroup]="kpForm">
+    <div class="form-control">
+        <div class="form-group">            
+            <label>Kolicina</label>
+            <input type="text" formControlName="KolicinaKupljenih">
+        </div>
+    </div>
+</form>
+
+<div>
+    <button [disabled]="!kpForm.valid"  (click)="submit()" class="myButton">Dodaj</button>
+</div>

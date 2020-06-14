@@ -38,6 +38,8 @@ import { NagradaInfoComponent } from './Components/nagrada-info/nagrada-info.com
 import { KnjigaNagradiFormComponent } from './Components/knjiga-nagradi-form/knjiga-nagradi-form.component';
 import { KnjigaInfoComponent } from './Components/knjiga-info/knjiga-info.component';
 import { KnjigaTipuFormComponent } from './Components/knjiga-tipu-form/knjiga-tipu-form.component';
+import { ProdajaInfoComponent } from './Components/prodaja-info/prodaja-info.component';
+import { KnjigaProdajiFormComponent } from './Components/knjiga-prodaji-form/knjiga-prodaji-form.component';
 
 
 
@@ -74,7 +76,9 @@ import { KnjigaTipuFormComponent } from './Components/knjiga-tipu-form/knjiga-ti
     NagradaInfoComponent,
     KnjigaNagradiFormComponent,
     KnjigaInfoComponent,
-    KnjigaTipuFormComponent
+    KnjigaTipuFormComponent,
+    ProdajaInfoComponent,
+    KnjigaProdajiFormComponent
   ],
   imports: [
     BrowserModule,

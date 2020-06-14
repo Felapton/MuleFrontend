@@ -27,5 +27,9 @@ export class ProdajaService {
 
   public updateProdaju(id: any, data: any): Observable<any> {
     return this.http.put(`http://localhost:8081/api/prodaja/${id}`, data);
-}
+  }
+
+  public getKnjigeByProdaja(id:any): Observable<any>{
+    return this.http.get(`http://localhost:8081/api/prodajaKnjiga/prodaja/${id}`)
+  }
 }
