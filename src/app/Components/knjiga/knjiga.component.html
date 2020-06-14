@@ -17,6 +17,7 @@
                 <td style ="text-align: center;">{{item.Cena}}</td>
                 <td style ="text-align: center;">{{item.KolicinaNaStanju}}</td>
                 <div class="btn-group">
+                    <a class="myButton" href = 'http://localhost:4200/knjiga/{{item.KnjigaID}}'>Vise informacija</a>                   
                     <a class="myButton" href = 'http://localhost:4200/dodajKnjigu/{{item.KnjigaID}}'>Uredi</a>                   
                     <button (click)="delete(item.KnjigaID, i)" class="myButton">Izbrisi</button>
                 </div>

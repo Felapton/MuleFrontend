@@ -32,4 +32,5 @@ export class NagradaService {
   public getKnjigeByNagrada(id:any): Observable<any>{
     return this.http.get(`http://localhost:8081/api/knjigaNagrada/nagrada/${id}`)
   }
+
 }

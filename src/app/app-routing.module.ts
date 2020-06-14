@@ -27,17 +27,21 @@ import { IzdavacInfoComponent } from './Components/izdavac-info/izdavac-info.com
 import { KnjigaIzdavacFormComponent } from './Components/knjiga-izdavac-form/knjiga-izdavac-form.component';
 import { KnjigaNagradiFormComponent } from './Components/knjiga-nagradi-form/knjiga-nagradi-form.component';
 import { NagradaInfoComponent } from './Components/nagrada-info/nagrada-info.component';
+import { KnjigaInfoComponent } from './Components/knjiga-info/knjiga-info.component';
+import { KnjigaTipuFormComponent } from './Components/knjiga-tipu-form/knjiga-tipu-form.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'knjiga', component: KnjigaComponent},
+  {path: 'knjiga/:id', component: KnjigaInfoComponent},
   {path: 'dodajKnjigu', component: KnjigaFormComponent},
   {path: 'dodajKnjigu/:id', component: KnjigaFormComponent},
   {path: 'dodajKnjiguPiscu', component: KnjigaPiscuFormComponent},
   {path: 'tip', component: TipKnjigeComponent},
   {path: 'tip/:id', component: TipInfoComponent},
+  {path: 'dodajKnjiguTipu', component: KnjigaTipuFormComponent},
   {path: 'korisnik', component: KorisnikComponent},
   {path: 'dodajKorisnika', component: KorisnikFormComponent},
   {path: 'dodajKorisnika/:id', component: KorisnikFormComponent},
