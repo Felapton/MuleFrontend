@@ -1,17 +1,23 @@
-<h1>Kupac</h1>
+<head></head>
 <body>
-    <a href = 'http://localhost:4200/dodajKupca' class="addButton">Dodaj</a>
-
-    <div class="col-md-12">
-        <table class="myTable">
+    <div class="row" id="pozadina">
+        <div class="col-md-7 p-lg-1 mx-auto my-6" style="text-align: center;">
+            <h1 style="text-align: center; color: #5c54b0; font-family: 'Times New Roman', Times, serif;"> Kupac </h1>
+        </div>
+    </div>
+    <section class="dimenzije2  text-center" id="pozadina2">
+    <div class="row" style="margin-left: 200pt; margin-top: 50pt;">
+        <table class="Mojatabela">
             <thead>
-                <tr>
+                <tr style="color: white;">
                     <th>Ime</th>
                     <th>Prezime</th>
                     <th>Adresa</th>
                     <th>Grad</th>
                     <th>Kontakt</th>
                     <th>Email</th>
+                    <th>Opcije</th>
+
                 </tr>
             </thead>
             <tbody *ngFor="let item of data; let i = index;">
@@ -22,12 +28,16 @@
                     <td style ="text-align: center;">{{item.GradKupca}}</td>
                     <td style ="text-align: center;">{{item.KontaktKupca}}</td>
                     <td style ="text-align: center;">{{item.EMailKupca}}</td>
-                    <div class="btn-group">
-                        <a class="myButton" href = 'http://localhost:4200/dodajKupca/{{item.KupacID}}'>Uredi</a>
-                        <button (click)="delete(item.KupacID, i)" class="myButton">Izbrisi</button>
+                    <div>
+                        <a href = 'http://localhost:4200/dodajKupca/{{item.KupacID}}' class="dugmeUredi">Uredi</a>
+                        <button (click)="delete(item.KupacID, i)" class="dugmeIzbrisi">Izbrisi</button>
                     </div>
                 </tr>
             </tbody>
         </table>
     </div>
+    <div class="row" style="margin-left: 500pt; margin-top: 50pt;">
+        <a href = 'http://localhost:4200/dodajKupca' class="dugmeDodaj">Dodaj</a>
+    </div>
+    </section>
 </body>
