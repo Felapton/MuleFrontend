@@ -1,0 +1,103 @@
+<tbody *ngFor="let item of data; let i = index">
+    <a class="myButton" href = 'http://localhost:4200/dodajKnjigu/{{item.KnjigaID}}'>Uredi</a>                   
+    <button (click)="delete(item.KnjigaID,i)" class="myButton">Izbrisi</button>
+</tbody>
+
+
+<table class="darkTable">
+    <tbody *ngFor="let item of data;">
+    <tr>
+        <td>Naziv Knjige</td>
+        <td style ="text-align: center;">{{item.NazivKnjige}}</td>
+    </tr>
+    <tr>
+        <td>Cena</td>
+        <td style ="text-align: center;">{{item.Cena}}</td>
+    </tr>
+    <tr>
+        <td>KolicinaNaStanju</td>
+        <td style ="text-align: center;">{{item.KolicinaNaStanju}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2 *ngFor="let item of data;">Tipovi od {{item.NazivKnjige}}</h2>
+<a href = 'http://localhost:4200/dodajKnjiguTipu' class="addButton">Dodaj</a>
+<div class="col-md-12">
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>Naziv Nagrade</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let tip of tipovi">
+            <tr>
+                <td style ="text-align: center;">{{tip.tipKnjige.NazivTipa}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<h2 *ngFor="let item of data;">Pisci od {{item.NazivKnjige}}</h2>
+<a href = 'http://localhost:4200/dodajKnjiguPiscu' class="addButton">Dodaj</a>
+<div class="col-md-12">
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>Ime</th>
+                <th>Prezime</th>
+                <th>Na stanju</th>
+                <th>Nacionalnost</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let pisac of pisci">
+            <tr>
+                <td style ="text-align: center;">{{pisac.pisac.ImePisca}}</td>
+                <td style ="text-align: center;">{{pisac.pisac.PrezimePisca}}</td>
+                <td style ="text-align: center;">{{pisac.pisac.GodinaRodjenja}}</td>
+                <td style ="text-align: center;">{{pisac.pisac.Nacionalnost}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 *ngFor="let item of data;">Izdavaci od {{item.NazivKnjige}}</h2>
+<a href = 'http://localhost:4200/dodajKnjiguIzdavacu' class="addButton">Dodaj</a>
+<div class="col-md-12">
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>Naziv Izdavaca</th>
+                <th>Godina Osnivanja</th>
+                <th>Drzava Osnivanja</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let izdavac of izdavaci">
+            <tr>
+                <td style ="text-align: center;">{{izdavac.izdavac.NazivIzdavaca}}</td>
+                <td style ="text-align: center;">{{izdavac.izdavac.GodinaOsnivanja}}</td>
+                <td style ="text-align: center;">{{izdavac.izdavac.DrzavaOsnivanja}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 *ngFor="let item of data;">Nagrade od {{item.NazivKnjige}}</h2>
+<a href = 'http://localhost:4200/dodajKnjiguNagradi' class="addButton">Dodaj</a>
+<div class="col-md-12">
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>Naziv Nagrade</th>
+                <th>Godina Osvajanja</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let nagrada of nagrade">
+            <tr>
+                <td style ="text-align: center;">{{nagrada.nagrada.NazivNagrade}}</td>
+                <td style ="text-align: center;">{{nagrada.godinaOsvajanja}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

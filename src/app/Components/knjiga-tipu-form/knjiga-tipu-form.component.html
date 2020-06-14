@@ -1,0 +1,14 @@
+<div class="dropDowns" >
+    <div class="form-group" *ngIf="tipovi.length > 0">            
+        <label>Tip Knjige</label>
+        <p-dropdown [options]="tipovi" [(ngModel)]="tip"></p-dropdown>
+    </div>
+    <div class="form-group" *ngIf="knjige.length > 0">            
+        <label>Knjiga</label>
+        <p-dropdown [options]="knjige" [(ngModel)]="knjiga"></p-dropdown>
+    </div>
+</div>
+
+<div>
+    <button [disabled]="!ktForm.valid"  (click)="submit()" class="myButton">Dodaj</button>
+</div>

@@ -42,4 +42,24 @@ export class KnjigaService {
   public addKnjiguNagradi(data: any): Observable<any> {
     return this.http.post(`http://localhost:8081/api/knjigaNagrada/`, data);
   }
+
+  public addKnjiguTipu(data: any): Observable<any> {
+    return this.http.post(`http://localhost:8081/api/knjigaTip/`, data);
+  }
+
+  public getNagradeByKnjiga(id:any): Observable<any>{
+    return this.http.get(`http://localhost:8081/api/knjigaNagrada/knjiga/${id}`)
+  }
+
+  public getIzdavaceByKnjiga(id:any): Observable<any>{
+    return this.http.get(`http://localhost:8081/api/knjigaIzdavac/knjiga/${id}`)
+  }
+
+  public getPisceByKnjiga(id:any): Observable<any>{
+    return this.http.get(`http://localhost:8081/api/knjigePisci/knjiga/${id}`)
+  }
+
+  public getTipoveByKnjiga(id:any): Observable<any>{
+    return this.http.get(`http://localhost:8081/api/knjigaTip/knjiga/${id}`)
+  }
 }
