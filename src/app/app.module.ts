@@ -34,6 +34,10 @@ import { KnjigaPiscuFormComponent } from './Components/knjiga-piscu-form/knjiga-
 import { TipInfoComponent } from './Components/tip-info/tip-info.component';
 import { IzdavacInfoComponent } from './Components/izdavac-info/izdavac-info.component';
 import { KnjigaIzdavacFormComponent } from './Components/knjiga-izdavac-form/knjiga-izdavac-form.component';
+import { NagradaInfoComponent } from './Components/nagrada-info/nagrada-info.component';
+import { KnjigaNagradiFormComponent } from './Components/knjiga-nagradi-form/knjiga-nagradi-form.component';
+
+
 
 
 @NgModule({
@@ -63,7 +67,9 @@ import { KnjigaIzdavacFormComponent } from './Components/knjiga-izdavac-form/knj
     KnjigaPiscuFormComponent,
     TipInfoComponent,
     IzdavacInfoComponent,
-    KnjigaIzdavacFormComponent
+    KnjigaIzdavacFormComponent,
+    NagradaInfoComponent,
+    KnjigaNagradiFormComponent
   ],
   imports: [
     BrowserModule,

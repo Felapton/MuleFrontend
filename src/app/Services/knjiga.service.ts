@@ -38,4 +38,8 @@ export class KnjigaService {
   public addKnjiguIzdavacu(data: any): Observable<any> {
     return this.http.post(`http://localhost:8081/api/knjigaIzdavac/`, data);
   }
+
+  public addKnjiguNagradi(data: any): Observable<any> {
+    return this.http.post(`http://localhost:8081/api/knjigaNagrada/`, data);
+  }
 }

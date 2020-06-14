@@ -12,7 +12,8 @@
             <tbody *ngFor="let item of data; let i = index">
                 <tr>
                     <td style ="text-align: center;">{{item.NagradaNaziv}}</td>
-                    <div class="btn-group" >
+                    <div class="btn-group">
+                        <a class="myButton" href = 'http://localhost:4200/nagrada/{{item.NagradaID}}'>Vise informacija</a>                   
                         <a class="myButton" href = 'http://localhost:4200/dodajNagradu/{{item.NagradaID}}'>Uredi</a>                   
                         <button (click)="delete(item.NagradaID, i)" class="myButton">Izbrisi</button>
                     </div>
