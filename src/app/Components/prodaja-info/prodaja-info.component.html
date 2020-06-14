@@ -1,0 +1,49 @@
+<tbody *ngFor="let item of data; let i = index">
+    <a class="myButton" href = 'http://localhost:4200/dodajProdaju/{{item.ProdajaID}}'>Uredi</a>                   
+    <button (click)="delete(item.ProdajaID,i)" class="myButton">Izbrisi</button>
+</tbody>
+
+
+<table class="darkTable">
+    <tbody *ngFor="let item of data;">
+    <tr>
+        <td>Vreme prodaje</td>
+        <td style ="text-align: center;">{{item.Datum}}</td>
+    </tr>
+    <tr>
+        <td>Ukupna Cena</td>
+        <td style ="text-align: center;">{{item.UkupnaCena}}</td>
+    </tr>
+    <tr>
+        <td>Prodavac</td>
+        <td style ="text-align: center;">{{item.korisnik.ImeKorisnika}} {{item.korisnik.PrezimeKorisnika}}</td>
+    </tr>
+    <tr>
+        <td>Kupac</td>
+        <td style ="text-align: center;">{{item.kupac.ImeKupca}} {{item.kupac.PrezimeKupca}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2 *ngFor="let item of data;">Artikli</h2>
+<tbody *ngFor="let item of data;">
+    <a href = 'http://localhost:4200/dodajKnjiguProdaji/{{item.ProdajaID}}' class="addButton">Dodaj</a>
+</tbody>
+<div class="col-md-12">
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>Naziv Knjige</th>
+                <th>Cena</th>
+                <th>Kolicina</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let knjiga of knjige">
+            <tr>
+                <td style ="text-align: center;">{{knjiga.knjiga.NazivKnjige}}</td>
+                <td style ="text-align: center;">{{knjiga.knjiga.Cena}}</td>
+                <td style ="text-align: center;">{{knjiga.kolicinaKupljenih}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

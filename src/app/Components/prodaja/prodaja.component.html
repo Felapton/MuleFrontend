@@ -19,6 +19,7 @@
                 <td style ="text-align: center;">{{item.korisnik.ImeKorisnika}} {{item.korisnik.PrezimeKorisnika}}</td>
                 <td style ="text-align: center;">{{item.kupac.ImeKupca}} {{item.kupac.PrezimeKupca}}</td>
                 <div class="btn-group">
+                    <a class="myButton" href = 'http://localhost:4200/prodaja/{{item.ProdajaID}}'>Vise informacija</a>                   
                     <a class="myButton" href = 'http://localhost:4200/dodajProdaju/{{item.ProdajaID}}'>Uredi</a>                   
                     <button (click)="delete(item.ProdajaID, i)" class="myButton">Izbrisi</button>
                 </div>
