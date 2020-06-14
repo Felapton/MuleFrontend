@@ -1,147 +1,147 @@
 table.Mojatabela{
-  background-color:#FFebd5e8 ;
-  background-size: cover;
-  width: 75%;
-  text-align: center;
-  border-collapse: collapse;
-
-}
-table.Mojatabela thead {
-  background: #FF8f688a;
-}
-
-#pozadina{
-  background:whitesmoke;
-  background-size: cover;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-.dugmeViseInf{
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-  text-shadow:0px 1px 0px #ffffff;
-  margin:5px;
-
-}
-
-.dugmeViseInf:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #f0f59d 100%);
-	background-color:#f6f6f6;
-}
-
-.dugmeViseInf:active {
-	position:relative;
-	top:1px;
-}
-.dugmeUredi {
+	background-color:#FFebd5e8 ;
+	background-size: cover;
+	width: 75%;
+	text-align: center;
+	border-collapse: collapse;
+  
+  }
+  table.Mojatabela thead {
+	background: #FF8f688a;
+  }
+  
+  #pozadina{
+	background:whitesmoke;
+	background-size: cover;
+	margin-top: 0rem;
+	margin-bottom: 0rem;
+  
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+  }
+  .dugmeViseInf{
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-  text-shadow:0px 1px 0px #ffffff;
-  margin:5px;
-
-}
-
-.dugmeUredi:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #cec7ed 100%);
-	background-color:#f6f6f6;
-}
-
-.dugmeUredi:active {
-	position:relative;
-	top:1px;
-}
-
-.dugmeIzbrisi {
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-  text-shadow:0px 1px 0px #ffffff;
-  margin:5px;
-
-}
-
-.dugmeIzbrisi:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #f5c1cb 100%);
-	background-color:#f6f6f6;
-}
-
-.dugmeIzbrisi:active {
-	position:relative;
-	top:1px;
-}
-
-.dugmeDodaj {
-	box-shadow:inset 0px 1px 0px 0px #c9daff;
-	background:linear-gradient(to bottom, #79a1fc 5%, #8cafff 100%);
-	background-color:#79a1fc;
-	border-radius:6px;
-	border:1px solid #8cafff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #0853ff;
-}
-
-.dugmeDodaj:hover {
-	background:linear-gradient(to bottom, #f6f7dc 5%, #f4f5c9 100%);
-	background-color:#f6f7dc;
-	border: #f4f5c9;
-	color: #8f688a;
-}
-.dugmeDodaj:active {
-	position: relative;;
-	top:1px;
-}
-
-.btn-group{
-  float: left;
-}
-
-.dimenzije2{
-  padding-top:7rem;
-  padding-bottom:7rem
-}
-#pozadina2 {
-  background: url(../../../assets/slike/pozadina.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
+	  background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	  background-color:#ffffff;
+	  border-radius:6px;
+	  border:1px solid #dcdcdc;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:#666666;
+	  font-family:Arial;
+	  font-size:15px;
+	  font-weight:bold;
+	  padding:6px 24px;
+	  text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	margin:5px;
+  
+  }
+  
+  .dugmeViseInf:hover {
+	  background:linear-gradient(to bottom, #f6f6f6 5%, #f0f59d 100%);
+	  background-color:#f6f6f6;
+  }
+  
+  .dugmeViseInf:active {
+	  position:relative;
+	  top:1px;
+  }
+  .dugmeUredi {
+	  box-shadow:inset 0px 1px 0px 0px #ffffff;
+	  background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	  background-color:#ffffff;
+	  border-radius:6px;
+	  border:1px solid #dcdcdc;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:#666666;
+	  font-family:Arial;
+	  font-size:15px;
+	  font-weight:bold;
+	  padding:6px 24px;
+	  text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	margin:5px;
+  
+  }
+  
+  .dugmeUredi:hover {
+	  background:linear-gradient(to bottom, #f6f6f6 5%, #cec7ed 100%);
+	  background-color:#f6f6f6;
+  }
+  
+  .dugmeUredi:active {
+	  position:relative;
+	  top:1px;
+  }
+  
+  .dugmeIzbrisi {
+	  box-shadow:inset 0px 1px 0px 0px #ffffff;
+	  background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	  background-color:#ffffff;
+	  border-radius:6px;
+	  border:1px solid #dcdcdc;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:#666666;
+	  font-family:Arial;
+	  font-size:15px;
+	  font-weight:bold;
+	  padding:6px 24px;
+	  text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	margin:5px;
+  
+  }
+  
+  .dugmeIzbrisi:hover {
+	  background:linear-gradient(to bottom, #f6f6f6 5%, #f5c1cb 100%);
+	  background-color:#f6f6f6;
+  }
+  
+  .dugmeIzbrisi:active {
+	  position:relative;
+	  top:1px;
+  }
+  
+  .dugmeDodaj {
+	  box-shadow:inset 0px 1px 0px 0px #c9daff;
+	  background:linear-gradient(to bottom, #79a1fc 5%, #8cafff 100%);
+	  background-color:#79a1fc;
+	  border-radius:6px;
+	  border:1px solid #8cafff;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:#ffffff;
+	  font-family:Arial;
+	  font-size:15px;
+	  font-weight:bold;
+	  padding:6px 24px;
+	  text-decoration:none;
+	  text-shadow:0px 1px 0px #0853ff;
+  }
+  
+  .dugmeDodaj:hover {
+	  background:linear-gradient(to bottom, #f6f7dc 5%, #f4f5c9 100%);
+	  background-color:#f6f7dc;
+	  border: #f4f5c9;
+	  color: #8f688a;
+  }
+  .dugmeDodaj:active {
+	  position: relative;;
+	  top:1px;
+  }
+  
+  .btn-group{
+	float: left;
+  }
+  
+  .dimenzije2{
+	padding-top:7rem;
+	padding-bottom:7rem
+  }
+  #pozadina2 {
+	background: url(../../../assets/slike/pozadina.jpg) no-repeat center center fixed;
+	background-size: cover;
+  }

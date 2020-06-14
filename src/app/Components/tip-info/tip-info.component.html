@@ -1,7 +1,6 @@
 <h2 *ngFor="let item of data">{{item.NazivTipa}}</h2>
 
 <tbody *ngFor="let item of data; let i = index">
-    <div class="row" id="pozadina"></div>
     <a class="myButton" href = 'http://localhost:4200/dodajTip/{{item.TipID}}'>Uredi</a>                   
     <button (click)="delete(item.TipID,i)" class="myButton">Izbrisi</button>
 </tbody>
