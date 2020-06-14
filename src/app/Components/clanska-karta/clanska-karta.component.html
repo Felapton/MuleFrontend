@@ -1,15 +1,20 @@
-<h1>Clanske Karte</h1>
-
-<a href = 'http://localhost:4200/dodajClansku' class="addButton">Dodaj</a>
-
+<body>
+    <div class="row" id="pozadina">
+        <div class="col-md-7 p-lg-1 mx-auto my-6" style="text-align: center;">
+            <h1 style="text-align: center; color: #5c54b0; font-family: 'Times New Roman', Times, serif;">Clanska Karta</h1>
+        </div>
+    </div>
+    
+<section class="dimenzije2  text-center" id="pozadina2">
 <div class="col-md-12">
-    <table class="myTable">
+    <table class="Mojatabela">
         <thead>
-            <tr>
+            <tr style="color: white;">
                 <th>Broj Clanske Karte</th>
                 <th>Traje Do</th>
                 <th>Izdao</th>
                 <th>Vlasnik</th>
+                <th>Opcije</th>
             </tr>
         </thead>
         <tbody *ngFor="let item of data; let i = index">
@@ -19,12 +24,17 @@
                 <td style ="text-align: center;">{{item.korisnik.ImeKorisnika}} {{item.korisnik.PrezimeKorisnika}}</td>
                 <td style ="text-align: center;">{{item.kupac.ImeKupca}} {{item.kupac.PrezimeKupca}}</td>
                 <div class="btn-group">
-                    <a class="myButton" href = 'http://localhost:4200/dodajClansku/{{item.ClanskaKartaID}}'>Uredi</a>                   
-                    <button (click)="delete(item.ClanskaKartaID, i)" class="myButton">Izbrisi</button>
+                    <a class="dugmeUredi" href = 'http://localhost:4200/dodajClansku/{{item.ClanskaKartaID}}'>Uredi</a>                   
+                    <button (click)="delete(item.ClanskaKartaID, i)" class="dugmeIzbrisi">Izbrisi</button>
                 </div>
             </tr>
         </tbody>
     </table>
 </div>
+
+<div class="row" style="margin-left: 500pt; margin-top: 50pt;">
+    <a href = 'http://localhost:4200/dodajClansku' class="dugmeDodaj">Dodaj</a>
+</div>
+</section>
 
 

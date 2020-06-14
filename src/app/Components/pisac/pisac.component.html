@@ -1,15 +1,21 @@
-<h1>Pisci</h1>
+<head></head>
 <body>
-    <a href = 'http://localhost:4200/dodajPisca' class="addButton">Dodaj</a>
-
-    <div class="col-md-12">
-        <table class="myTable">
+    <div class="row" id="pozadina">
+        <div class="col-md-7 p-lg-1 mx-auto my-6" style="text-align: center;">
+            <h1 style="text-align: center; color: #5c54b0; font-family: 'Times New Roman', Times, serif;">Pisac</h1>
+        </div>
+    </div>
+    <section class="dimenzije2  text-center" id="pozadina2">
+    <div class="row" style="margin-left: 200pt; margin-top: 50pt;">
+        <table class="Mojatabela">
             <thead>
-                <tr>
+                <tr style="color: white;">
                     <th>Ime</th>
                     <th>Prezime</th>
                     <th>Godina Rodjenja</th>
                     <th>Nacionalnost</th>
+                    <th>Opcije</th>
+
                 </tr>
             </thead>
             <tbody *ngFor="let item of data; let i = index;">
@@ -18,13 +24,17 @@
                     <td style ="text-align: center;">{{item.PrezimePisca}}</td>
                     <td style ="text-align: center;">{{item.GodinaRodjenja}}</td>
                     <td style ="text-align: center;">{{item.Nacionalnost}}</td>
-                    <div class="btn-group">
-                        <a class="myButton" href = 'http://localhost:4200/pisac/{{item.PisacID}}'>Vise informacija</a>                   
-                        <a class="myButton" href = 'http://localhost:4200/dodajPisca/{{item.PisacID}}'>Uredi</a>                   
-                        <button (click)="delete(item.PisacID, i)" class="myButton">Izbrisi</button>
+                    <div>
+                        <a href = 'http://localhost:4200/pisac/{{item.PisacID}}' class="dugmeViseInf">Vise informacija</a>
+                        <a href = 'http://localhost:4200/dodajPisca/{{item.PisacID}}' class="dugmeUredi">Uredi</a>
+                        <button (click)="delete(item.PisacID, i)" class="dugmeIzbrisi">Izbrisi</button>
                     </div>
                 </tr>
             </tbody>
         </table>
     </div>
+    <div class="row" style="margin-left: 500pt; margin-top: 50pt;">
+        <a href = 'http://localhost:4200/dodajPisca' class="dugmeDodaj">Dodaj</a>
+    </div>
+    </section>
 </body>

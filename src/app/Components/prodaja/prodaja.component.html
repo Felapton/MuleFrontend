@@ -1,31 +1,40 @@
-<h1>Prodaje</h1>
+<head></head>
+<body>
+    <div class="row" id="pozadina">
+        <div class="col-md-7 p-lg-1 mx-auto my-6" style="text-align: center;">
+            <h1 style="text-align: center; color: #5c54b0; font-family: 'Times New Roman', Times, serif;"> Prodaja </h1>
+        </div>
+    </div>
+    <section class="dimenzije2  text-center" id="pozadina2">
+    <div class="row" style="margin-left: 200pt; margin-top: 50pt;">
+        <table class="Mojatabela">
+            <thead>
+                <tr style="color: white;">
+                    <th>Datum</th>
+                    <th>Cena</th>
+                    <th>Prodavac</th>
+                    <th>Kupac</th>
+                    <th>Opcije</th>
 
-<a href = 'http://localhost:4200/dodajProdaju' class="addButton">Dodaj</a>
-
-<div class="col-md-12">
-    <table class="myTable">
-        <thead>
-            <tr>
-                <th>Datum</th>
-                <th>Cena</th>
-                <th>Prodavac</th>
-                <th>Kupac</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let item of data; let i = index;">
-            <tr>
-                <td style ="text-align: center;">{{item.Datum}}</td>
-                <td style ="text-align: center;">{{item.UkupnaCena}}</td>
-                <td style ="text-align: center;">{{item.korisnik.ImeKorisnika}} {{item.korisnik.PrezimeKorisnika}}</td>
-                <td style ="text-align: center;">{{item.kupac.ImeKupca}} {{item.kupac.PrezimeKupca}}</td>
-                <div class="btn-group">
-                    <a class="myButton" href = 'http://localhost:4200/prodaja/{{item.ProdajaID}}'>Vise informacija</a>                   
-                    <a class="myButton" href = 'http://localhost:4200/dodajProdaju/{{item.ProdajaID}}'>Uredi</a>                   
-                    <button (click)="delete(item.ProdajaID, i)" class="myButton">Izbrisi</button>
-                </div>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of data; let i = index;">
+                <tr>
+                    <td style ="text-align: center;">{{item.Datum}}</td>
+                    <td style ="text-align: center;">{{item.UkupnaCena}}</td>
+                    <td style ="text-align: center;">{{item.korisnik.ImeKorisnika}} {{item.korisnik.PrezimeKorisnika}}</td>
+                    <td style ="text-align: center;">{{item.kupac.ImeKupca}} {{item.kupac.PrezimeKupca}}</td>
+                    <div>
+                        <a href = 'http://localhost:4200/prodaja/{{item.ProdajaID}}' class="dugmeViseInf">Vise informacija</a>
+                        <a href = 'http://localhost:4200/dodajProdaju/{{item.ProdajaID}}' class="dugmeUredi">Uredi</a>
+                        <button (click)="delete(item.ProdajaID, i)" class="dugmeIzbrisi">Izbrisi</button>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" style="margin-left: 500pt; margin-top: 50pt;">
+        <a href = 'http://localhost:4200/dodajProdaju' class="dugmeDodaj">Dodaj</a>
+    </div>
+    </section>
+</body>

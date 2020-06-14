@@ -160,6 +160,14 @@ table.darkTable {
 	top:1px;
 }
 
+#pozadina{
+  background:whitesmoke;
+  background-size: cover;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 
 

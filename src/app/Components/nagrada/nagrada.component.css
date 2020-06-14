@@ -1,63 +1,53 @@
-table.myTable {
-    border: 2px solid #1C6EA4;
-    background-color: #EEEEEE;
-    width: 80%;
-    text-align: center;
-    border-collapse: collapse;
-  }
-  table.myTable td, table.myTable th {
-    border: 2px solid #AAAAAA;
-    padding: 2px 2px;
-  }
-  table.myTable tbody td {
-    font-size: 15px;
-  }
-  table.myTable tr:nth-child(even) {
-    background: #D0E4F5;
-  }
-  table.myTable thead {
-    background: #1C6EA4;
-    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    border-bottom: 2px solid #444444;
-  }
-  table.myTable thead th {
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-align: center;
-    border-left: 2px solid #D0E4F5;
-  }
-  table.myTable thead th:first-child {
-    border-left: none;
-  }
-  
-  table.myTable tfoot {
-    font-size: 14px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background: #D0E4F5;
-    background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    border-top: 2px solid #444444;
-  }
-  table.myTable tfoot td {
-    font-size: 14px;
-  }
-  table.myTable tfoot .links {
-    text-align: right;
-  }
-  table.myTable tfoot .links a{
-    display: inline-block;
-    background: #1C6EA4;
-    color: #FFFFFF;
-    padding: 2px 8px;
-    border-radius: 5px;
-  }
+table.Mojatabela{
+  background-color:#FFebd5e8 ;
+  background-size: cover;
+  width: 75%;
+  text-align: center;
+  border-collapse: collapse;
 
-  .myButton {
+}
+table.Mojatabela thead {
+  background: #FF8f688a;
+}
+
+#pozadina{
+  background:whitesmoke;
+  background-size: cover;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.dugmeViseInf{
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  margin:5px;
+
+}
+
+.dugmeViseInf:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #f0f59d 100%);
+	background-color:#f6f6f6;
+}
+
+.dugmeViseInf:active {
+	position:relative;
+	top:1px;
+}
+.dugmeUredi {
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
 	background-color:#ffffff;
@@ -75,22 +65,52 @@ table.myTable {
   margin:5px;
 
 }
-.myButton:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+
+.dugmeUredi:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #cec7ed 100%);
 	background-color:#f6f6f6;
 }
-.myButton:active {
+
+.dugmeUredi:active {
 	position:relative;
 	top:1px;
 }
 
-
-.addButton {
-	box-shadow:inset 0px 1px 0px 0px #a4e271;
-	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
-	background-color:#89c403;
+.dugmeIzbrisi {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
 	border-radius:6px;
-	border:1px solid #74b807;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  margin:5px;
+
+}
+
+.dugmeIzbrisi:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #f5c1cb 100%);
+	background-color:#f6f6f6;
+}
+
+.dugmeIzbrisi:active {
+	position:relative;
+	top:1px;
+}
+
+.dugmeDodaj {
+	box-shadow:inset 0px 1px 0px 0px #c9daff;
+	background:linear-gradient(to bottom, #79a1fc 5%, #8cafff 100%);
+	background-color:#79a1fc;
+	border-radius:6px;
+	border:1px solid #8cafff;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -99,19 +119,29 @@ table.myTable {
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #528009;
+	text-shadow:0px 1px 0px #0853ff;
 }
-.addButton:hover {
-	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
-	background-color:#77a809;
+
+.dugmeDodaj:hover {
+	background:linear-gradient(to bottom, #f6f7dc 5%, #f4f5c9 100%);
+	background-color:#f6f7dc;
+	border: #f4f5c9;
+	color: #8f688a;
 }
-.addButton:active {
+.dugmeDodaj:active {
 	position: relative;;
 	top:1px;
 }
+
 .btn-group{
   float: left;
 }
 
-
-
+.dimenzije2{
+  padding-top:7rem;
+  padding-bottom:7rem
+}
+#pozadina2 {
+  background: url(../../../assets/slike/pozadina.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
